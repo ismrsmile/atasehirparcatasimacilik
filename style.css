@@ -110,7 +110,7 @@ html {
 	transition: .5s;
 }
 
-.navbar i,.navbar .whatsapp {
+.navbar i,.navbar .phone {
 	font-size: 4rem;
 	color: #1F1F2E;
 	cursor: pointer;
@@ -284,7 +284,12 @@ html {
 	color: #161616;
 }
 
-
+.whatsapp{
+	position: fixed;
+	padding: 2rem;
+	bottom: 1%;
+	cursor: pointer;
+}
 
 @media(max-width: 837px) {
 	html {
@@ -295,6 +300,10 @@ html {
 @media(max-width: 762px) {
 	.transportation .row .trans-left h3 {
 		padding: 1.4rem;
+	}
+
+	.whatsapp img {
+		width: 47px;
 	}
 }
 
@@ -328,7 +337,7 @@ html {
 		display: none;
 	}
 
-	.navbar i,.navbar .whatsapp {
+	.navbar i,.navbar .phone {
 		display: block;
 	}
 
