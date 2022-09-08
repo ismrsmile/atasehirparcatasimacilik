@@ -19,6 +19,7 @@ html {
 	background-position: center;
 	background-size: cover;
 	position: relative;
+	box-shadow: 0 0 30px 0 rgba(255, 72, 0, 0.65);
 }
 
 .top {
@@ -109,7 +110,7 @@ html {
 	transition: .5s;
 }
 
-.navbar i {
+.navbar i,.navbar .whatsapp {
 	font-size: 4rem;
 	color: #1F1F2E;
 	cursor: pointer;
@@ -162,7 +163,7 @@ html {
 }
 
 .info h2 {
-	font-size: 2rem;
+	font-size: 2.3rem;
 	margin-bottom: 0.5rem;
 	color: #FF4800;
 }
@@ -182,7 +183,7 @@ html {
 }
 
 .info h3 {
-	font-size: 3rem;
+	font-size: 3.3rem;
 	letter-spacing: 1px;
 	color: #161616;
 }
@@ -199,7 +200,8 @@ html {
 	background: #fff3f3;
 	border-radius: 10px;
 	padding: 20px 15px;
-	margin: 3% 2%;
+	margin: 0 2%;
+	margin-bottom: 3%;
 	transition: .5s;
 }
 
@@ -222,11 +224,77 @@ html {
 	box-shadow: 0 0 23px 0 rgba(255, 72, 0, 0.60);
 }
 
+.transportation {
+	width: 90%;
+	margin: auto;
+	text-align: center;
+	max-width: 1500px;
+	padding-top: 15px;
+}
+
+.transportation .row {
+	display: flex;
+	justify-content: center;
+}
+
+.transportation .row .trans-left {
+	flex-basis: 40%;
+	max-width: 492px;
+	max-height: 409px;
+	background: #FF4800;
+	margin-left: 3%;
+	border-top-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.transportation .row .trans-left:hover {
+	box-shadow: 0 0 23px 0 rgba(255, 72, 0, 0.68);
+	transition: .5s;
+}
+
+.transportation .row .trans-left img {
+	width: 100%;
+	height: 85%;
+	border-top-left-radius: 30px;
+}
+
+.transportation .row .trans-left h3 {
+	padding: 0.5rem;
+	font-size: 2.6rem;
+	color: #fff;
+}
+
+.transportation .row .trans-right {
+	flex-basis: 55%;
+	margin-right: 3%;
+	text-align: left;
+	padding: 0.7rem 2rem;
+}
+
+.transportation .row .trans-right h3 {
+	font-size: 3rem;
+	color: #FF4800;
+	margin-bottom: 1rem;
+}
+
+.transportation .row .trans-right p {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: #161616;
+}
+
 
 
 @media(max-width: 837px) {
 	html {
 		font-size: 7px;
+	}
+}
+
+@media(max-width: 762px) {
+	.transportation .row .trans-left h3 {
+		padding: 1.4rem;
 	}
 }
 
@@ -260,8 +328,13 @@ html {
 		display: none;
 	}
 
-	.navbar i {
+	.navbar i,.navbar .whatsapp {
 		display: block;
+	}
+
+	.navbar i:hover{
+		color: #FF4800;
+		transition: .5s;
 	}
 
 	.navbar .nav-links{
@@ -269,7 +342,7 @@ html {
         width: 100%;
         height: 300px;
         background: #fff;
-        top: 128px;
+        top: 100px;
         right: -100%;
         text-align: center;
         z-index: 2;
@@ -305,5 +378,24 @@ html {
 	.info .row .info-col {
 		flex-basis: 32%;
 		max-width: 535px;
+	}
+
+	.transportation .row {
+		flex-direction: column;
+	}
+
+	.transportation .row .trans-right {
+		padding: 2rem 2rem;
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+
+	.transportation .row .trans-left {
+		margin-left: 4%;
+		margin-right: 4%;
+	}
+
+	.transportation .row .trans-right p {
+		font-size: 2rem;
 	}
 }
